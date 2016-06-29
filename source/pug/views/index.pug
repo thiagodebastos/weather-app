@@ -1,0 +1,21 @@
+extends ../includes/layout.pug
+
+block links
+  //- link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')
+  link(rel='stylesheet', href='css/master.css')
+block title
+  title Random Quote Generator
+
+block content
+  header: h1 Weather App
+  .weatherApp
+    .weatherApp--info
+      | [city], [country]
+    .weatherApp--info
+      | [temp][measurement[C|F]]
+    .weatherApp--info
+      | [precipitation]
+  footer
+    p created by Thiago de Bastos, 2016. No rights reserved.
+block scripts
+  script(src="js/main.js")
