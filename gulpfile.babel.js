@@ -83,7 +83,7 @@ gulp.task('serve', ['build'], () => {
   gulp.watch("source/img/**/*", ['images'], browserSync.reload);
   gulp.watch("source/css/**/*.css", ['postcss']);
   gulp.watch("source/pug/**/*.pug", ['pug'], browserSync.reload);
-  gulp.watch("source/data/**/*", ['data-copy'], browserSync.reload);
+  gulp.watch("source/data/*.json", ['data-copy'], browserSync.reload);
   gulp.watch("source/js/*.js", ['scripts'], browserSync.reload);
   gulp.watch("source/js/vendor/*.js", ['scripts-vendor'], browserSync.reload);
 });

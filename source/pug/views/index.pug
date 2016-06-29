@@ -9,12 +9,10 @@ block title
 block content
   header: h1 Weather App
   .weatherApp
-    .weatherApp--info
-      | [city], [country]
-    .weatherApp--info
-      | [temp][measurement[C|F]]
-    .weatherApp--info
-      | [precipitation]
+    .weatherApp--info.js-location
+    .weatherApp--info.js-temp
+    .weatherApp--info.js-clouds
+    .weatherApp--info.js-rain
   footer
     p created by Thiago de Bastos, 2016. No rights reserved.
 block scripts
