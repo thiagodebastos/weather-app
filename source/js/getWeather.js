@@ -13,10 +13,23 @@ const getWeather = new Promise((resolve, reject) => {
   getPosition.then((position) => {
     // Once position is retrieved, get local weather
     // TODO: add possibility of using default data
-  const url = 'data/london.json';
-  // const url = `${query}${apikey}/${position.coords.latitude},${position.coords.longitude}`;
-  fetch(url)
-  .then((response) => response.json())
+  // const url = 'data/london.json';
+  const forecastioUrl = `${query}${apikey}/${position.coords.latitude},${position.coords.longitude}`;
+
+  // HACK: ended up using jquery to access JSONP due to lack of cross-domain support
+  const fetch = new Promise((resolve) => {
+    $.ajax({
+     url: forecastioUrl,
+     dataType: "jsonp",
+     success: (data) => {
+         console.log('here');
+         console.log(data.currently);
+         resolve(data)
+     },
+   })
+  })
+  fetch
+  // .then((response) => response.json())
   .then((w) => {
 
     // cache results in object
