@@ -29,7 +29,7 @@ const getWeather = new Promise((resolve, reject) => {
    })
   })
   fetch
-  // .then((response) => response.json())
+  // .then((response) => response.json()) // not using .fetch() API
   .then((w) => {
 
     // cache results in object
