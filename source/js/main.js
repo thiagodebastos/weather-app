@@ -7,20 +7,38 @@ const appRain = document.querySelector('.js-rain');
 const appClouds = document.querySelector('.js-clouds');
 
 
-const allPromises = [getLocation, getWeather];
+// const allPromises = [getPosition(), getWeather('./data/london.json')];
+//
+// Promise.all(allPromises)
+//   .then((results) => {
+//     const location = results[0]
+//     const weather1 = results
+//     console.log(location, weather1)
+//   })
 
-Promise.all(allPromises)
-  .then((results) => {
-    const location = results[0]()
-    const weather = results[1]()
-    console.log(location, weather)
-  })
 
-// ES6 fetch API returns a promise
+let weather;
+let loc;
 
-const temp = appTemp.innerText;
-appTempC.addEventListener('click', ((event) =>
-(appTemp.textContent = roundNum((appTemp.innerText - 32) / 1.8))))
+getPosition({enableHighAccuracy: false})
+  .then((position) => {
+    loc = position;
+    appLocation.textContent += `${position.coords.latitude}, ${position.coords.longitude}`;
 
-appTempF.addEventListener('click', ((event) =>
-(appTemp.textContent = roundNum(appTemp.innerText * 9/5 +32))))
+})
+getWeather('./data/london.json')
+  .then((result) => {
+    console.log("I'm getting the weather immediately!");
+    weather = result; //cache results
+    appTemp.textContent = weather.tempC;
+    appLocation.textContent = `${weather.location}, ${weather.country}`;
+    appClouds.textContent = weather.clouds;
+    appRain.textContent = weather.rain;  console.log(weather);
+
+    // event listeners for radio buttom
+    appTempC.addEventListener('click', ((event) =>
+    (appTemp.textContent = weather.tempC)))
+    appTempF.addEventListener('click', ((event) =>
+    (appTemp.textContent = weather.tempF)))
+    console.log(result);
+})
