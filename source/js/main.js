@@ -18,27 +18,15 @@ const appClouds = document.querySelector('.js-clouds');
 
 
 let weather;
-let loc;
+let pos;
 
-getPosition({enableHighAccuracy: false})
-  .then((position) => {
-    loc = position;
-    appLocation.textContent += `${position.coords.latitude}, ${position.coords.longitude}`;
 
-})
-getWeather('./data/london.json')
-  .then((result) => {
-    console.log("I'm getting the weather immediately!");
-    weather = result; //cache results
-    appTemp.textContent = weather.tempC;
-    appLocation.textContent = `${weather.location}, ${weather.country}`;
-    appClouds.textContent = weather.clouds;
-    appRain.textContent = weather.rain;  console.log(weather);
 
-    // event listeners for radio buttom
-    appTempC.addEventListener('click', ((event) =>
-    (appTemp.textContent = weather.tempC)))
-    appTempF.addEventListener('click', ((event) =>
-    (appTemp.textContent = weather.tempF)))
-    console.log(result);
-})
+// const loca = new Promise((resolve) => setTimeout(() => {
+//   (resolve('location'))
+// }, 2000))
+// const weath = new Promise((resolve) => setTimeout(() => {
+//   (resolve('weather'))
+// }, 10))
+//
+// loca.then((val) => weath.then((valb) => console.log(`${val} based on ${valb}`)))
