@@ -32,10 +32,10 @@ http://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=3946023bac4a
             pos = position.coords;
             console.log(pos.latitude, pos.longitude);
             weather = result; //cache results
-            appTemp.textContent = weather.tempC;
+            appTemp.textContent = `${weather.tempC} degrees`;
             appLocation.textContent = `${weather.location}, ${weather.country}`;
-            appClouds.textContent = weather.clouds;
-            appRain.textContent = weather.rain;
+            appClouds.textContent = `Cloud cover: ${weather.clouds}%`;
+            appRain.textContent = `Chance of rain: ${weather.rain}`;
 
             // event listeners for radio buttom
             appTempC.addEventListener('click', ((event) =>
