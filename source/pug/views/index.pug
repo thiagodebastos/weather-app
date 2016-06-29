@@ -4,15 +4,23 @@ block links
   //- link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')
   link(rel='stylesheet', href='css/master.css')
 block title
-  title Random Quote Generator
+  title Weather App
 
 block content
   header: h1 Weather App
   .weatherApp
     .weatherApp--info.js-location
-    .weatherApp--info.js-temp
-    .weatherApp--info.js-clouds
-    .weatherApp--info.js-rain
+    .weatherApp--info
+      span.js-temp
+    form.weatherApp--tempUnit
+      input.js-tempC(type="radio" name="tempUnit" value="celsius" checked)
+      | ℃
+      input.js-tempF(type="radio" name="tempUnit" value="fahrenheit")
+      | F
+    .weatherApp--info
+      span.js-clouds
+    .weatherApp--info
+      span.js-rain
   footer
     p created by Thiago de Bastos, 2016. No rights reserved.
 block scripts
