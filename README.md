@@ -26,3 +26,24 @@ Example: [http://codepen.io/FreeCodeCamp/full/bELRjV](http://codepen.io/FreeCode
 - [ ] When you are finished, click the "I've completed this challenge" button and include a link to your CodePen.
 
 - [ ] You can get feedback on your project by sharing it with your friends on Facebook.
+
+----
+## Resources:
+- [Forecast.io](https://developer.forecast.io/) API
+- Temperature conversion forumlae from [rapidtables.com](http://www.rapidtables.com/convert/temperature/how-fahrenheit-to-celsius.htm)
+
+### JavaScript
+- [`Math.trunc()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc)
+- [`Math.random()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)
+- [`Geolocation.getCurrentPosition()`](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition)
+- [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+#### StackOverflow
+- [“No 'Access-Control-Allow-Origin' header is present on the requested resource”](http://stackoverflow.com/a/20035319/3108412)
+#### Helpful posts
+- [ponyfoo.com: ES6 Promises in depth](https://ponyfoo.com/articles/es6-promises-in-depth#what-is-a-promise)
+- [ES6 Everyday: Promises](ES6 Everyday: Promises)
+- [datchley.name: ES6 Promises](http://www.datchley.name/es6-promises/)
+- [davidwalsh.name: ES6 `.fetch()` API](https://davidwalsh.name/fetch)
+- [MDN: Using `.fetch()` API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+- [html5rocks.com: Using CORS](http://www.html5rocks.com/en/tutorials/cors/)
+- [Sitepoint.com: Vanilla AJAX without jQuery](https://www.sitepoint.com/guide-vanilla-ajax-without-jquery/)
