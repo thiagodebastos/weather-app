@@ -1,7 +1,7 @@
 ### Project URLs for Code Review
 
-* [App preview]
-* [GitLab code link]
+* [App preview](https://thiagodebastos.gitlab.io/fcc-weather-app/)
+* [Source Code](https://gitlab.com/thiagodebastos/fcc-weather-app/tree/master)
 
 ----
 
