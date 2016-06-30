@@ -40,6 +40,7 @@ Example: [http://codepen.io/FreeCodeCamp/full/bELRjV](http://codepen.io/FreeCode
 #### StackOverflow
 - [“No 'Access-Control-Allow-Origin' header is present on the requested resource”](http://stackoverflow.com/a/20035319/3108412)
 #### Helpful posts
+- [Youtube: JavaScript Promises: Thinking Sync in an Async World](https://www.youtube.com/watch?v=wc72cyYt8-c)
 - [ponyfoo.com: ES6 Promises in depth](https://ponyfoo.com/articles/es6-promises-in-depth#what-is-a-promise)
 - [ES6 Everyday: Promises](ES6 Everyday: Promises)
 - [datchley.name: ES6 Promises](http://www.datchley.name/es6-promises/)
