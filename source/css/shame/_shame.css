@@ -45,9 +45,19 @@
 
 .weatherApp--tempUnit {
   align-self: flex-end;
+  font-size: 1.5em;
+  & span {
+    padding: 5px;
+  }
+  & :hover {
+    cursor: pointer;
+    color: grey;
+  }
 }
 
 footer {
+  text-align: center;
+  width: 430px;
+  background-color: #123;
   font-size: 0.3rem;
-  color: black;
 }

@@ -31,11 +31,9 @@ block content
         .weatherApp--info-icon
           canvas.weatherApp--icon.js-weatherIcon
 
-      form.weatherApp--tempUnit
-        input.js-tempC(type="radio" name="tempUnit" value="celsius" checked)
-        | ℃
-        input.js-tempF(type="radio" name="tempUnit" value="fahrenheit")
-        | F
+      .weatherApp--tempUnit
+        span.js-tempC ℃
+        span.js-tempF F
     footer
       p created by Thiago de Bastos, 2016. No rights reserved.
 block scripts
