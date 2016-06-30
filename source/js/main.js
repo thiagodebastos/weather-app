@@ -29,12 +29,12 @@ const getWeather = new Promise((resolve, reject) => {
   getPosition.then((position) => {
     // Once position is retrieved, get local weather
     const forecastioUrl = `${query}${apikey}/${position.coords.latitude},${position.coords.longitude}`;
-
+    console.log(position);
     // NOTE: ended up using zepto to access JSONP for cross-domain support
     const fetchWeatherData = new Promise((resolve) => {
       const config = {
-        url: forecastioUrl,
-        dataType: "jsonp",
+        url: testUrl,
+        dataType: "json",
         success: (data) => {
           resolve(data)
         },
@@ -56,6 +56,7 @@ const getWeather = new Promise((resolve, reject) => {
           clouds: w.currently.cloudCover,
           location: w.timezone,
           summary: w.currently.summary,
+          icon: w.currently.icon,
         }
         resolve(weather);
       })
@@ -73,8 +74,10 @@ const getWeather = new Promise((resolve, reject) => {
         appTempFeel.textContent = `feels like ${weather.tempCFeel}`;
         appSummary.textContent = weather.summary;
         appRain.textContent = `Chance of rain: ${weather.rain}`;
-        appWeatherIcon.src = weatherIcons.lightRain.icon;
+        // appWeatherIcon.src = weatherIcons.lightRain.icon;
         appBg.style.backgroundImage = `url(${weatherIcons.lightRain.bg})`;
+        skycons.set(document.querySelector(".js-weatherIcon"), weather.icon);
+        skycons.play();
 
         // event listeners for radio button here
         appTempC.addEventListener('click', ((event) =>

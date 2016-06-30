@@ -7,26 +7,28 @@ block title
   title Weather App
 
 block content
-  header: h1 Weather App
   .weatherApp.js-bg-image
     .weatherApp--info.js-location
 
-    .weatherApp--info-temp
-      span.weatherApp--temp.js-temp
-      sup &deg;
-      span.js-temp-unit
+    .fl-row
+      .weatherApp--info-temp
+        span.weatherApp--temp.js-temp
+        sup &deg;
+        span.js-temp-unit
 
-    .weatherApp--info-feel
-      span.weatherApp--temp-feel.js-temp-feel
-      sup &deg;
-      span.js-temp-unit
+        .weatherApp--info-feel
+          span.weatherApp--temp-feel.js-temp-feel
+          sup &deg;
+          span.js-temp-unit
 
-    .weatherApp--info
-      span.weatherApp--summary.js-summary
-    .weatherApp--info
-      span.js-rain
-    .weatherApp--info
-      img.weatherApp--icon.js-weatherIcon
+        .weatherApp--info
+          span.weatherApp--summary.js-summary
+        .weatherApp--info
+          span.js-rain
+
+      .weatherApp--info-icon
+        canvas.weatherApp--icon.js-weatherIcon
+
     form.weatherApp--tempUnit
       input.js-tempC(type="radio" name="tempUnit" value="celsius" checked)
       | ℃
@@ -36,4 +38,5 @@ block content
     p created by Thiago de Bastos, 2016. No rights reserved.
 block scripts
   script(src="js/vendor/vendor.js")
+  script(src="js/vendor/skycons.js")
   script(src="js/main.js")
