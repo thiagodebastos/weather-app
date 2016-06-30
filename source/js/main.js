@@ -29,12 +29,11 @@ const getWeather = new Promise((resolve, reject) => {
   getPosition.then((position) => {
     // Once position is retrieved, get local weather
     const forecastioUrl = `${query}${apikey}/${position.coords.latitude},${position.coords.longitude}`;
-    console.log(position);
     // NOTE: ended up using zepto to access JSONP for cross-domain support
     const fetchWeatherData = new Promise((resolve) => {
       const config = {
-        url: testUrl,
-        dataType: "json",
+        url: forecastioUrl,
+        dataType: "jsonp",
         success: (data) => {
           resolve(data)
         },
