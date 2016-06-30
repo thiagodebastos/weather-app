@@ -30,6 +30,7 @@ Example: [http://codepen.io/FreeCodeCamp/full/bELRjV](http://codepen.io/FreeCode
 ----
 ## Resources:
 - [Forecast.io](https://developer.forecast.io/) API
+- [skycons](https://github.com/darkskyapp/skycons) (animated HTML5 Canvas icons)
 - Temperature conversion forumlae from [rapidtables.com](http://www.rapidtables.com/convert/temperature/how-fahrenheit-to-celsius.htm)
 
 ### JavaScript
