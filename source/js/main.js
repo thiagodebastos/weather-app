@@ -65,7 +65,7 @@ const getWeather = new Promise((resolve, reject) => {
         appClouds.textContent = `Cloud cover: ${weather.clouds}`;
         appRain.textContent = `Chance of rain: ${weather.rain}`;
         appWeatherIcon.src = weatherIcons.lightRain.icon;
-        document.body.style.backgroundImage = `url(${weatherIcons.lightRain.bg})`;
+        document.querySelector(".bg-image").style.backgroundImage = `url(${weatherIcons.lightRain.bg})`;
         // event listeners for radio button here
         appTempC.addEventListener('click', ((event) =>
           (appTemp.textContent = weather.tempC)))
