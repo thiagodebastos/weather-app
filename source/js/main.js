@@ -72,7 +72,7 @@ const getWeather = new Promise((resolve, reject) => {
         appTemp.textContent = weather.tempC;
         appTempFeel.textContent = `feels like ${weather.tempCFeel}`;
         appSummary.textContent = weather.summary;
-        appRain.textContent = `Chance of rain: ${weather.rain}`;
+        appRain.textContent = `Chance of rain: ${roundNum(weather.rain*100)}%`;
         // appWeatherIcon.src = weatherIcons.lightRain.icon;
         appBg.style.backgroundImage = `url(${weatherIcons.lightRain.bg})`;
         skycons.set(document.querySelector(".js-weatherIcon"), weather.icon);
