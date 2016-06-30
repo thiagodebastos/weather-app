@@ -80,10 +80,14 @@ const getWeather = new Promise((resolve, reject) => {
         skycons.play();
 
         // event listeners for radio button here
-        appTempC.addEventListener('click', ((event) =>
-          (appTemp.textContent = weather.tempC, appTempFeel.textContent = `feels like ${weather.tempCFeel}`)))
-        appTempF.addEventListener('click', ((event) =>
-          (appTemp.textContent = weather.tempF, appTempFeel.textContent = `feels like ${weather.tempFFeel}`)))
+        appTempC.addEventListener('click', ((event) => (
+          appTemp.textContent = weather.tempC,
+          appTempFeel.textContent = `feels like ${weather.tempCFeel}`
+        )))
+        appTempF.addEventListener('click', ((event) => (
+          appTemp.textContent = weather.tempF,
+          appTempFeel.textContent = `feels like ${weather.tempFFeel}`
+        )))
 
       })
   })

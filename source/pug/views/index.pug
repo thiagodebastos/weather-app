@@ -7,35 +7,37 @@ block title
   title Weather App
 
 block content
-  .weatherApp.js-bg-image
-    .weatherApp--info.js-location
+  .main-container
 
-    .fl-row
-      .weatherApp--info-temp
-        span.weatherApp--temp.js-temp
-        sup &deg;
-        span.js-temp-unit
+    .weatherApp.js-bg-image
+      .weatherApp--info.js-location
 
-        .weatherApp--info-feel
-          span.weatherApp--temp-feel.js-temp-feel
+      .fl-row
+        .weatherApp--info-temp
+          span.weatherApp--temp.js-temp
           sup &deg;
           span.js-temp-unit
 
-        .weatherApp--info
-          span.weatherApp--summary.js-summary
-        .weatherApp--info
-          span.js-rain
+          .weatherApp--info-feel
+            span.weatherApp--temp-feel.js-temp-feel
+            sup &deg;
+            span.js-temp-unit
 
-      .weatherApp--info-icon
-        canvas.weatherApp--icon.js-weatherIcon
+          .weatherApp--info
+            span.weatherApp--summary.js-summary
+          .weatherApp--info
+            span.js-rain
 
-    form.weatherApp--tempUnit
-      input.js-tempC(type="radio" name="tempUnit" value="celsius" checked)
-      | ℃
-      input.js-tempF(type="radio" name="tempUnit" value="fahrenheit")
-      | F
-  footer
-    p created by Thiago de Bastos, 2016. No rights reserved.
+        .weatherApp--info-icon
+          canvas.weatherApp--icon.js-weatherIcon
+
+      form.weatherApp--tempUnit
+        input.js-tempC(type="radio" name="tempUnit" value="celsius" checked)
+        | ℃
+        input.js-tempF(type="radio" name="tempUnit" value="fahrenheit")
+        | F
+    footer
+      p created by Thiago de Bastos, 2016. No rights reserved.
 block scripts
   script(src="js/vendor/vendor.js")
   script(src="js/vendor/skycons.js")
