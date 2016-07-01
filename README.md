@@ -11,11 +11,11 @@ Example: [http://codepen.io/FreeCodeCamp/full/bELRjV](http://codepen.io/FreeCode
 
 - [x] Rule 1: Don't look at the example project's code. Figure it out for yourself.
 
-- [ ] Rule 2: Fulfill the below user stories. Use whichever libraries or APIs you need. Give it your own personal style.
+- [x] Rule 2: Fulfill the below user stories. Use whichever libraries or APIs you need. Give it your own personal style.
 
 - [x] **User Story**: I can see the weather in my current location.
 
-- [ ] **User Story**: I can see a different icon or background image (e.g. snowy mountain, hot desert) depending on the weather.
+- [x] **User Story**: I can see a different icon or background image (e.g. snowy mountain, hot desert) depending on the weather.
 
 - [x] **User Story**: I can push a button to toggle between Fahrenheit and Celsius.
 
@@ -23,16 +23,16 @@ Example: [http://codepen.io/FreeCodeCamp/full/bELRjV](http://codepen.io/FreeCode
 
 - [x] Remember to use Read-Search-Ask if you get stuck.
 
-- [ ] When you are finished, click the "I've completed this challenge" button and include a link to your CodePen.
+- [x] When you are finished, click the "I've completed this challenge" button and include a link to your CodePen.
 
-- [ ] You can get feedback on your project by sharing it with your friends on Facebook.
+- [x] You can get feedback on your project by sharing it with your friends on Facebook.
 
 ----
 ## Resources:
 - [Forecast.io](https://developer.forecast.io/) API
 - [skycons](https://github.com/darkskyapp/skycons) (animated HTML5 Canvas icons)
 - Temperature conversion forumlae from [rapidtables.com](http://www.rapidtables.com/convert/temperature/how-fahrenheit-to-celsius.htm)
-
+- [unsplash](https://unsplash.com) Free Stock photos
 ### JavaScript
 - [`Math.trunc()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc)
 - [`Math.random()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)
