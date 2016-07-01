@@ -32,8 +32,9 @@ const getWeather = new Promise((resolve, reject) => {
     // NOTE: ended up using zepto to access JSONP for cross-domain support
     const fetchWeatherData = new Promise((resolve) => {
       const config = {
-        url: forecastioUrl,
-        dataType: "jsonp",
+        // use local data file during development to reduce API calls
+        url: (/local|192/.test(window.location.href)) ? testUrl : forecastioUrl,
+        dataType: (/local|192/.test(window.location.href)) ? "json" : "jsonp",
         success: (data) => {
           resolve(data)
         },
@@ -47,7 +48,7 @@ const getWeather = new Promise((resolve, reject) => {
 
         // cache results in object
         const weather = {
-          rain: (w.currently.precipProbability) ? w.currently.precipProbability : 'no rain',
+          rain: (w.currently.precipProbability) ? `${w.currently.precipProbability*100}%` : 'no rain',
           tempC: `${convertTemp('fc', w.currently.temperature)}`,
           tempCFeel: `${convertTemp('fc', w.currently.apparentTemperature)}`,
           tempF: `${roundNum(w.currently.temperature)}`,
@@ -72,7 +73,7 @@ const getWeather = new Promise((resolve, reject) => {
         appTemp.textContent = weather.tempC;
         appTempFeel.textContent = `feels like ${weather.tempCFeel}`;
         appSummary.textContent = weather.summary;
-        appRain.textContent = `Chance of rain: ${roundNum(weather.rain*100)}%`;
+        appRain.textContent = `Chance of rain: ${weather.rain}`;
         // appWeatherIcon.src = weatherIcons.lightRain.icon;
         appBg.style.backgroundImage = `url(${weatherIcons.lightRain.bg})`;
         skycons.set(document.querySelector(".js-weatherIcon"), weather.icon);
