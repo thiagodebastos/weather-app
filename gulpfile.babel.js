@@ -20,8 +20,6 @@ import jpegtran from 'imagemin-jpegtran';
 import pngquant from 'imagemin-pngquant';
 import svgo from 'imagemin-svgo';
 import pug from 'gulp-pug';
-import rupture from 'rupture';
-import sGrid from 's-grid';
 
 // POSTCSS
 // import autoprefixer from 'autoprefixer';
