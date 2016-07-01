@@ -21,7 +21,7 @@ function convertTemp(fromTo, temp){
       return roundNum((temp - 32) * 5/9)
       break;
     default:
+      console.error('[convertTemp]: Enter a legal value for "fromTo"');
       return '[Error: Check log for details]'
-      console.log('[convertTemp]: Enter a legal value for "fromTo"');
   }
 }

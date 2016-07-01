@@ -1,53 +1,68 @@
-/*components*/
+:root {
+  --appWidth: 100%;
+  --appHeight: 100%;
+}
+
 * {
   box-sizing: border-box;
 }
 
+/*components*/
+
 .fl-row {
   display: flex;
   flex-direction: row;
+  @media (max-device-width: 600px) {
+    flex-direction: column;
+  }
 }
 .main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-size: cover;
+  height: 100vh;
 }
 
 .weatherApp {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: rgba(255,255,255,0.6);
-  width: 430px;
-  height: 390px;
-  color: white;
+  background-color: rgba(0,0,0,0.4);
+  height: var(--appHeight);
   padding: 1rem;
-  background-size: cover;
-  border: 8px solid #123;
+  border: calc(1/8 * 1rem) solid #123;
+  width: var(--appWidth);
+  max-width: 960px;
+  background-blend-mode: color-dodge;
+}
+
+.weatherApp--info {
+  min-height: 1.5rem;
 }
 
 .weatherApp--info-temp,
 .weatherApp--info-icon {
   flex: 1;
-  flex-wrap: wrapreverse;
 }
 .weatherApp--icon {
-  width: 220px;
+  order: 1;
+  width: 13.7rem;
 }
 
 .weatherApp--temp {
-  font-size: 4em;
+  font-size: 4rem;
 }
 
 .weatherApp--temp + sup {
-  font-size: 2.5em;
+  font-size: 2.5rem;
 }
 
 .weatherApp--tempUnit {
   align-self: flex-end;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   & span {
-    padding: 5px;
+    padding: 0.5rem;
   }
   & :hover {
     cursor: pointer;
@@ -57,7 +72,42 @@
 
 footer {
   text-align: center;
-  width: 430px;
   background-color: #123;
-  font-size: 0.3rem;
+  font-size: 0.5rem;
+  width: var(--appWidth);
+  max-width: 960px;
+}
+
+/* standard resolution devices */
+@media only screen and (min-width: 371px) and (max-resolution: 96dpi) {
+  html {font-size: 90%;}
+}
+@media only screen and (min-width: 453px) and (max-width: 580px) and (max-resolution: 96dpi) {
+  html {font-size: 110%;}
+}
+@media only screen and (min-width: 580px) and (max-width: 780px) and (max-resolution: 96dpi) {
+  html {font-size: 135%;}
+}
+@media only screen and (min-width: 780px) and (max-width: 1039px) and (max-resolution: 96dpi) {
+  html {font-size: 155%;}
+}
+@media only screen and (min-width: 1040px) and (max-resolution: 96dpi) {
+  html {font-size: 180%;}
+}
+
+/* high dpi devices */
+@media only screen and (max-device-width: 370px) and (min-resolution: 192dpi) {
+  html {font-size: 400%;}
+}
+@media only screen and (min-device-width: 371px) and (min-resolution: 192dpi) {
+  html {font-size: 300%;}
+}
+@media only screen and (min-device-width: 450px) and (max-device-width: 718px) and (min-resolution: 192dpi) {
+  html {font-size: 235%;}
+}
+@media only screen and (min-device-width: 719px) and (max-device-width: 1039px) and (min-resolution: 192dpi) {
+  html {font-size: 220%;}
+}
+@media only screen and (min-device-width: 1040px) and (min-resolution: 192dpi) {
+  html {font-size: 200%;}
 }
