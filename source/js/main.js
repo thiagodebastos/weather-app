@@ -68,14 +68,13 @@ const getWeather = new Promise((resolve, reject) => {
 
         pos = position.coords;
         weather = result; //cache results
-
+        weatherBgs
         appLocation.textContent = weather.location;
         appTemp.textContent = weather.tempC;
         appTempFeel.textContent = `feels like ${weather.tempCFeel}`;
         appSummary.textContent = weather.summary;
         appRain.textContent = `Chance of rain: ${weather.rain}`;
-        // appWeatherIcon.src = weatherIcons.lightRain.icon;
-        appBg.style.backgroundImage = `url(${weatherIcons.lightRain.bg})`;
+        appBg.style.backgroundImage = `url(${weatherBgs[weather.icon]})`;
         skycons.set(document.querySelector(".js-weatherIcon"), weather.icon);
         skycons.play();
 

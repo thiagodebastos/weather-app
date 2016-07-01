@@ -1,23 +1,16 @@
-const weatherIcons = {
-  lightRain: {
-    icon: './img/weather-icons/light-rain.svg',
-    bg: './img/weather-bg/light-rain.jpg',
-  },
-}
-
 const weatherBgs = (() => {
   const bgLoc = './img/weather-bg'
   const bgs = {
-    clearDay: `${bgLoc}/thisbg.jpg`,
-    clearNight: `${bgLoc}/thisbg.jpg`,
-    rain: `${bgLoc}/thisbg.jpg`,
-    snow: `${bgLoc}/thisbg.jpg`,
-    sleet: `${bgLoc}/thisbg.jpg`,
-    wind: `${bgLoc}/thisbg.jpg`,
-    fog: `${bgLoc}/thisbg.jpg`,
-    cloudy: `${bgLoc}/thisbg.jpg`,
-    partlyCloudyDay: `${bgLoc}/thisbg.jpg`,
-    partlyCloudyNight: `${bgLoc}/thisbg.jpg`,
+    'clear-day': `${bgLoc}/clear-day.jpeg`,
+    'clear-night': `${bgLoc}/clear-night.jpeg`,
+    rain: `${bgLoc}/rain.jpeg`,
+    snow: `${bgLoc}/snow.jpeg`,
+    sleet: `${bgLoc}/sleet.jpeg`,
+    wind: `${bgLoc}/wind.jpeg`,
+    fog: `${bgLoc}/fog.jpeg`,
+    cloudy: `${bgLoc}/cloudy.jpeg`,
+    'partly-cloudy-day': `${bgLoc}/partly-cloudy-day.jpeg`,
+    'partly-cloudy-night': `${bgLoc}/partly-cloudy-night.jpeg`,
   }
   return bgs;
 })()
